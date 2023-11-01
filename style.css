@@ -1,0 +1,55 @@
+body {
+  font-family: 'Jost', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+}
+
+.side-menu {
+  /* background-color: aqua; */
+  width: fit-content;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 2%;
+}
+
+.centered-bottom {
+  position: absolute;
+  font-size: 40px;
+  line-height: 14.4px;
+  letter-spacing: -2%;
+  align-items: center;
+  bottom: 7%;
+  left: 23%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 14.4px;
+  letter-spacing: -2%;
+  align-items: center;
+}
+
+#contact-links {
+  margin-top: 13.4px;
+}
+
+#foto-links {
+  margin-bottom: 13.4px;
+}
+
+.slide-show {
+  position: relative;
+  text-align: center;
+}
+
+@media screen and (max-width:720px) {
+  .side-menu .slide-show {
+    width: 100%;
+  }
+}
