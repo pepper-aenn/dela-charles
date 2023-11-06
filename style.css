@@ -1,11 +1,11 @@
 body {
   font-family: 'Jost', sans-serif;
   margin: 0;
-  /* box-sizing: border-box; */
   padding: 93px 30px 93px 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  max-height: fit-content;
 }
 
 p {
@@ -16,17 +16,31 @@ p {
   align-items: start;
 }
 
+img {
+  object-fit: contain;
+  width: 100%;
+  height: fit-content;
+}
+
 a {
   text-decoration: none;
   color:black;
 }
+
 .side-menu {
   width: fit-content;
-  height: 540px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-right: 5%;
+}
+
+#home-contact {
+  margin-top: 8px;
+}
+
+#foto-links {
+  margin-bottom: 8px;
 }
 
 .slide-show {
@@ -41,22 +55,82 @@ a {
   text-align: center;
 }
 
-#contact-links {
-  margin-top: 8px;
+.description-below {
+  display: none;
 }
-
-#foto-links {
-  margin-bottom: 8px;
+#announcement {
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 #mail {
-  margin-top: 40px;
-  margin-bottom: 0;
-  line-height: 10px;
+  margin-top: 0;
+  line-height: 12px;
 }
 
 @media screen and (max-width:720px) {
-  .side-menu .slide-show {
-    width: 100%;
+  body {
+    flex-direction: column;
+  }
+  p {
+    font-size: 12px;
+    color:black;
+  }
+
+  a {
+    margin: 0;
+  }
+  .side-menu {
+    flex-direction: row;
+    padding-bottom: 5%;
+    padding-right: 0%;
+    width: auto;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #home-contact {
+    margin-top: 12px;
+    margin-right: 8px;
+  }
+
+  #foto-links {
+    margin-left: 8px;
+  }
+
+  .slide-show {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: fit-content;
+    max-width: fit-content;
+    /* column-gap: 30px; */
+  }
+
+  .centered-bottom {
+    visibility: hidden;
+  }
+
+  .description-below {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    padding-top: 5%;
+  }
+
+  #announcement-2 {
+    margin-top:12px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .contact {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
   }
 }
